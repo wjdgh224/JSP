@@ -24,33 +24,33 @@ public class JoinServlet extends HttpServlet {
 	}	
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("doPost()È£Ãâ");
-		//ÇÑ±Û ±úÁüÀ» ¹æÁöÇÏ±â À§ÇØ¼­ ¼³Á¤.
+		System.out.println("doPost()í˜¸ì¶œ");
+		//í•œê¸€ ê¹¨ì§ì„ ë°©ì§€í•˜ê¸° ìœ„í•´ì„œ ì„¤ì •.
 		request.setCharacterEncoding("UTF-8");
 		
-		//htmlÀÇ formÅÂ±×¿¡¼­ Å¬¶óÀÌ¾ğÆ®°¡ ÀÔ·ÂÇÏ°í Àü¼ÛÇÑ °ªÀ» Á÷Á¢ request °´Ã¼ÀÇ ¸Ş¼­µå·Î ¾ò¾î¼­ Ãâ·Â.
-		//request, response°´Ã¼ ÅèÄ¹ ¼­¹ö°¡ ÀÚµ¿À¸·Î »ı¼º.
-		//request°´Ã¼·ÎºÎÅÍ °ªÀ» ¾ò°í ÀÀ´äÇÒ ½Ã¿¡´Â response°´Ã¼¸¦ ÀÌ¿ë.
+		//htmlì˜ formíƒœê·¸ì—ì„œ í´ë¼ì´ì–¸íŠ¸ê°€ ì…ë ¥í•˜ê³  ì „ì†¡í•œ ê°’ì„ ì§ì ‘ request ê°ì²´ì˜ ë©”ì„œë“œë¡œ ì–»ì–´ì„œ ì¶œë ¥.
+		//request, responseê°ì²´ í†°ìº£ ì„œë²„ê°€ ìë™ìœ¼ë¡œ ìƒì„±.
+		//requestê°ì²´ë¡œë¶€í„° ê°’ì„ ì–»ê³  ì‘ë‹µí•  ì‹œì—ëŠ” responseê°ì²´ë¥¼ ì´ìš©.
 		String name = request.getParameter("name");
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
 		
-		//Ã¼Å©¹Ú½ºÀÇ °æ¿ì ´ÙÁß°ªÀÌ¹Ç·Î String[]Å¸ÀÔÀ¸·Î ¸®ÅÏ.
+		//ì²´í¬ë°•ìŠ¤ì˜ ê²½ìš° ë‹¤ì¤‘ê°’ì´ë¯€ë¡œ String[]íƒ€ì…ìœ¼ë¡œ ë¦¬í„´.
 		String[] hobby = request.getParameterValues("hobby");
 		String major = request.getParameter("major");
 		String protocol = request.getParameter("protocol");
 		
-		//À§ÀÇ °ªµéÀ» ¹Ş¾Æ¼­ Å¬¶óÀÌ¾ğÆ®¿¡°Ô Ãâ·Â.
+		//ìœ„ì˜ ê°’ë“¤ì„ ë°›ì•„ì„œ í´ë¼ì´ì–¸íŠ¸ì—ê²Œ ì¶œë ¥.
 		response.setContentType("text/html; charset=utf-8");
-		PrintWriter writer = response.getWriter(); //Ãâ·Â½ºÆ®¸² ¾ò±â
+		PrintWriter writer = response.getWriter(); //ì¶œë ¥ìŠ¤íŠ¸ë¦¼ ì–»ê¸°
 		
 		writer.println("<html><head></head><body>");
-		writer.println("ÀÌ¸§ :" + name + "<br>");
-		writer.println("¾ÆÀÌµğ" + id + "<br>");
-		writer.println("ºñ¹Ğ¹øÈ£ :" + pw + "<br>");
-		writer.println("Ãë¹Ì :" + Arrays.toString(hobby) + "<br>");
-		writer.println("Àü°ø :" + major + "<br>");
-		writer.println("ÇÁ·ÎÅäÄİ :" + protocol + "<br>");
+		writer.println("ì´ë¦„ :" + name + "<br>");
+		writer.println("ì•„ì´ë””" + id + "<br>");
+		writer.println("ë¹„ë°€ë²ˆí˜¸ :" + pw + "<br>");
+		writer.println("ì·¨ë¯¸ :" + Arrays.toString(hobby) + "<br>");
+		writer.println("ì „ê³µ :" + major + "<br>");
+		writer.println("í”„ë¡œí† ì½œ :" + protocol + "<br>");
 		writer.println("</body></html>");
 		writer.close();
 	}
