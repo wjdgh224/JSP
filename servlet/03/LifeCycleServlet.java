@@ -19,55 +19,55 @@ public class LifeCycleServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
     public LifeCycleServlet() {
-    	System.out.println("»ı¼ºÀÚ È£Ãâ");
+    	System.out.println("ìƒì„±ì í˜¸ì¶œ");
     }
 	
-	//init()´Â ctrl+space, ÃÖÃÊ ÇÑ¹ø È£Ãâ
+	//init()ëŠ” ctrl+space, ìµœì´ˆ í•œë²ˆ í˜¸ì¶œ
 	@Override
 	public void init() throws ServletException {
-			System.out.println("init()È£Ãâ");
+			System.out.println("init()í˜¸ì¶œ");
 		}
     
-    //½ÇÇàµÇ¾úÀ» ¶§, ¼­ºí¸´ °´Ã¼°¡ ¸Ş¸ğ¸®¿¡ ·Îµù µÇ°í, °è¼Ó Àç»ç¿ë.
+    //ì‹¤í–‰ë˜ì—ˆì„ ë•Œ, ì„œë¸”ë¦¿ ê°ì²´ê°€ ë©”ëª¨ë¦¬ì— ë¡œë”© ë˜ê³ , ê³„ì† ì¬ì‚¬ìš©.
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("doGet()È£Ãâ");
+		System.out.println("doGet()í˜¸ì¶œ");
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("doPost()È£Ãâ");
+		System.out.println("doPost()í˜¸ì¶œ");
 	}
 	
-	//doGet(), doPost()°¡ ¾ø´Ù¸é service()°¡ È£Ãâ
-	//¼¼°¡Áö ¸Ş¼­½º ´Ù Á¸ÀçÇÏ¿©µµ service()È£Ãâ
-	//service()´Â get, post¹æ½ÄÀ¸·Î ¾î¶² ¸Ş¼­µå ¹æ½ÄÀ¸·Î È£Ãâ µÇ¾ú´ÂÁö ¾Ë ¼ö ¾ø´Ù.
+	//doGet(), doPost()ê°€ ì—†ë‹¤ë©´ service()ê°€ í˜¸ì¶œ
+	//ì„¸ê°€ì§€ ë©”ì„œìŠ¤ ë‹¤ ì¡´ì¬í•˜ì—¬ë„ service()í˜¸ì¶œ
+	//service()ëŠ” get, postë°©ì‹ìœ¼ë¡œ ì–´ë–¤ ë©”ì„œë“œ ë°©ì‹ìœ¼ë¡œ í˜¸ì¶œ ë˜ì—ˆëŠ”ì§€ ì•Œ ìˆ˜ ì—†ë‹¤.
 	/*
 	 * @Override protected void service(HttpServletRequest arg0, HttpServletResponse
 	 * arg1) throws ServletException, IOException {
-	 * System.out.println("service()È£Ãâ"); }
+	 * System.out.println("service()í˜¸ì¶œ"); }
 	 */
 	
-	//¼­¹ö¸¦ ÁßÁö½ÃÅ°¸é È£Ãâ
+	//ì„œë²„ë¥¼ ì¤‘ì§€ì‹œí‚¤ë©´ í˜¸ì¶œ
 	@Override
 	public void destroy() {
-		System.out.println("destroy()È£Ãâ");
+		System.out.println("destroy()í˜¸ì¶œ");
 	}
 	
-	//¿À¹ö¶óÀÌµùÀÌ ¾Æ´Ï¶ó Á÷Á¢ ¸Ş¼­µå¸¦ ¸¸µé¾î ÁØ´Ù.
-	//¼±Ã³¸® ºÎºĞ¿¡ ÇØ´ç.
-	//init()¸Ş¼­µå È£ÃâµÇ±â Àü ¸ÕÀú ½ÇÇà.
-	//¾î³ëÅ×ÀÌ¼ÇÀÌ ÄÄÆÄÀÏ·¯ÇÑÅ× µû·Î Áö½Ã.
+	//ì˜¤ë²„ë¼ì´ë”©ì´ ì•„ë‹ˆë¼ ì§ì ‘ ë©”ì„œë“œë¥¼ ë§Œë“¤ì–´ ì¤€ë‹¤.
+	//ì„ ì²˜ë¦¬ ë¶€ë¶„ì— í•´ë‹¹.
+	//init()ë©”ì„œë“œ í˜¸ì¶œë˜ê¸° ì „ ë¨¼ì € ì‹¤í–‰.
+	//ì–´ë…¸í…Œì´ì…˜ì´ ì»´íŒŒì¼ëŸ¬í•œí…Œ ë”°ë¡œ ì§€ì‹œ.
 	@PostConstruct
 	private void initPostConstructor() {
-		System.out.println("initPostConstructor() ÈÄÃ³¸®");
+		System.out.println("initPostConstructor() í›„ì²˜ë¦¬");
 	}
 	
-	//¿À¹ö¶óÀÌµùÀÌ ¾Æ´Ï¶ó Á÷Á¢ ¸Ş¼­µå¸¦ ¸¸µé¾î ÁØ´Ù.
-	//ÈÄÃ³¸® ºÎºĞ¿¡ ÇØ´ç.
-	//destroy()¸Ş¼­µå È£ÃâµÈ ÈÄ ¸ÕÀú ½ÇÇà.
-	//¾î³ëÅ×ÀÌ¼ÇÀÌ ÄÄÆÄÀÏ·¯ÇÑÅ× µû·Î Áö½Ã.
+	//ì˜¤ë²„ë¼ì´ë”©ì´ ì•„ë‹ˆë¼ ì§ì ‘ ë©”ì„œë“œë¥¼ ë§Œë“¤ì–´ ì¤€ë‹¤.
+	//í›„ì²˜ë¦¬ ë¶€ë¶„ì— í•´ë‹¹.
+	//destroy()ë©”ì„œë“œ í˜¸ì¶œëœ í›„ ë¨¼ì € ì‹¤í–‰.
+	//ì–´ë…¸í…Œì´ì…˜ì´ ì»´íŒŒì¼ëŸ¬í•œí…Œ ë”°ë¡œ ì§€ì‹œ.
 	@PreDestroy
 	private void destroyPredestroy() {
-		System.out.println("destroyPredestroy() ÈÄÃ³¸®");
+		System.out.println("destroyPredestroy() í›„ì²˜ë¦¬");
 	}
 	
 }
