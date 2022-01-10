@@ -38,26 +38,26 @@ public class CalcServlet extends HttpServlet {
 		
 		if(command!=null && command.equals("calculate")) {
 			String result = calculate(Float.parseFloat(won), operator);
-			writer.print("<html><font size=10>º¯È¯ °á°ú</font><br>");
+			writer.print("<html><font size=10>ë³€í™˜ ê²°ê³¼</font><br>");
 			writer.print("<font size=10>" + result + "</font><br>");
-			writer.print("<a href='Calc'>È¯À² °è»ê±â</a>");
+			writer.print("<a href='Calc'>í™˜ìœ¨ ê³„ì‚°ê¸°</a>");
 			return;
 		}
 		
-		writer.print("<html><title>È¯À² °è»ê±â</title>");
-		writer.print("<font size=5>È¯À² °è»ê±â</font><br>");
+		writer.print("<html><title>í™˜ìœ¨ ê³„ì‚°ê¸°</title>");
+		writer.print("<font size=5>í™˜ìœ¨ ê³„ì‚°ê¸°</font><br>");
 		writer.print("<form name='frmCalc' method='get' action='Calc'>");
-		writer.print("¿øÈ­ : <input type='text' name='won' size=10>");
+		writer.print("ì›í™” : <input type='text' name='won' size=10>");
 		writer.print("<select name='operator'>");
-		writer.print("<option value='dollar'>´Ş·¯</option>");
-		writer.print("<option value='en'>¿£È­</option>");
-		writer.print("<option value='wian'>À§¾È</option>");
-		writer.print("<option value='pound'>ÆÄ¿îµå</option>");
-		writer.print("<option value='euro'>À¯·Î</option>");
+		writer.print("<option value='dollar'>ë‹¬ëŸ¬</option>");
+		writer.print("<option value='en'>ì—”í™”</option>");
+		writer.print("<option value='wian'>ìœ„ì•ˆ</option>");
+		writer.print("<option value='pound'>íŒŒìš´ë“œ</option>");
+		writer.print("<option value='euro'>ìœ ë¡œ</option>");
 		writer.print("</select>");
 		
 		writer.print("<input type='hidden' name='command' value='calculate'>");
-		writer.print("<input type='submit' value='º¯È¯'>");
+		writer.print("<input type='submit' value='ë³€í™˜'>");
 		writer.print("</form></html>");
 		writer.close();
 	}
