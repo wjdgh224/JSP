@@ -20,15 +20,15 @@ public class GetorPostServlet extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("doGet¸Ş¼­µå È£ÃâµÊ");
+		System.out.println("doGetë©”ì„œë“œ í˜¸ì¶œë¨");
 		response.setContentType("text/html; charset=utf-8" );
 		PrintWriter writer = response.getWriter();
-		writer.print("¾È³çÇÏ¼¼¿ä.");
+		writer.print("ì•ˆë…•í•˜ì„¸ìš”.");
 		writer.println("<html>");
 		writer.println("<head>");
 		writer.println("</head>");
 		writer.println("<body>");
-		writer.println("<h1>doGet¹æ½ÄÀÔ´Ï´Ù.¹İ°©½À´Ï´Ù.</h1>");
+		writer.println("<h1>doGetë°©ì‹ì…ë‹ˆë‹¤.ë°˜ê°‘ìŠµë‹ˆë‹¤.</h1>");
 		writer.println("</body>");
 		writer.println("</html>");
 		
@@ -36,15 +36,15 @@ public class GetorPostServlet extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("doPost¸Ş¼­µå È£ÃâµÊ");
+		System.out.println("doPostë©”ì„œë“œ í˜¸ì¶œë¨");
 		response.setContentType("text/html; charset=utf-8" );
 		PrintWriter writer = response.getWriter();
-		writer.print("¾È³çÇÏ¼¼¿ä.");
+		writer.print("ì•ˆë…•í•˜ì„¸ìš”.");
 		writer.println("<html>");
 		writer.println("<head>");
 		writer.println("</head>");
 		writer.println("<body>");
-		writer.println("<h1>doPost¹æ½ÄÀÔ´Ï´Ù.¹İ°©½À´Ï´Ù.</h1>");
+		writer.println("<h1>doPostë°©ì‹ì…ë‹ˆë‹¤.ë°˜ê°‘ìŠµë‹ˆë‹¤.</h1>");
 		writer.println("</body>");
 		writer.println("</html>");
 		
