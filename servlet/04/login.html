@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>로그인 화면</title>
+
+<script type="text/javascript">
+	function func_validate() {
+		//frmLogin 변수 선언하고 document(웹페이지 화면)객체 아래에 있는 form태그의 이름을 대입
+		var frmLogin = document.frmLogin;
+		var user_id = frmLogin.user_id.value;
+		var user_pw = frmLogin.user_pw.value;
+		
+		if((user_id.length==0 || user_id=="")||(user_pw.length==0 || user_pw=="")) {
+			alert("아이디와 비밀번호는 필수 사항입니다.")
+		}
+		else{
+			frmLogin.method = "post";
+			frmLogin.action = "login";
+			frmLogin.submit();
+		}
+	}
+</script>
+
+</head>
+<body>
+	<form name="frmLogin" action="login" method="post" enctype="utf-8">
+		아이디 : <input type="text" name="user_id"><br>
+		비밀번호 : <input type="password" name="user_pw"><br>
+		
+		<!-- button이 클릭되었을 때, func_validate() 자동 호출이 된다. 자바스크립트로 함수를 만들어서
+		유효성이나 반드시 입력되어야 되는 부분 등을 검사. -->
+		<input type="button" onclick="func_validate()" value="로그인">
+		<input type="reset" value="재입력">
+		<!-- hidden 속성은 클라이언트에게 숨겨진 내용으로 서버에 전송하고자 할 때 사용.(로그인 시간, IP...) -->
+		<input type="hidden" name="user_address" value="대구시 달서구">
+	</form>
+</body>
+</html>
