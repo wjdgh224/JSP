@@ -20,34 +20,34 @@ public class LoginServlet extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("doGet()È£ÃâµÊ");
+		System.out.println("doGet()í˜¸ì¶œë¨");
 		
-		//Å¬¶óÀÌ¾ğÆ®°¡ ¿äÃ»ÇÑ ÆÄ¶ó¸ŞÅÍ °ªÀÇ ÀÎÄÚµùÀ» ¼³Á¤ÇØÁÖ´Â ÄÚµå.
+		//í´ë¼ì´ì–¸íŠ¸ê°€ ìš”ì²­í•œ íŒŒë¼ë©”í„° ê°’ì˜ ì¸ì½”ë”©ì„ ì„¤ì •í•´ì£¼ëŠ” ì½”ë“œ.
 		request.setCharacterEncoding("utf-8");
-		//Å¬¶óÀÌ¾ğÆ®¿¡°Ô¼­ ³Ñ¾î¿À´Â id, pass¸¦ ¹Ş°í ÀÎÄÚµù ¼³Á¤ ÈÄ Ãâ·Â½ºÆ®¸²À» ¾ò°í È­¸é¿¡ »Ñ¸². name ¼Ó¼º
+		//í´ë¼ì´ì–¸íŠ¸ì—ê²Œì„œ ë„˜ì–´ì˜¤ëŠ” id, passë¥¼ ë°›ê³  ì¸ì½”ë”© ì„¤ì • í›„ ì¶œë ¥ìŠ¤íŠ¸ë¦¼ì„ ì–»ê³  í™”ë©´ì— ë¿Œë¦¼. name ì†ì„±
 		String id = request.getParameter("id");
 		String passwd = request.getParameter("passwd");
 		
 		response.setContentType("text/html; charset=utf-8");
 		PrintWriter writer = response.getWriter();
-		writer.println("¾ÆÀÌµğ : " + id + "<br>");
-		writer.println("ºñ¹Ğ¹øÈ£ : " + passwd + "<br>");
+		writer.println("ì•„ì´ë”” : " + id + "<br>");
+		writer.println("ë¹„ë°€ë²ˆí˜¸ : " + passwd + "<br>");
 		
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("doPost()È£ÃâµÊ");
+		System.out.println("doPost()í˜¸ì¶œë¨");
 		
-		//Å¬¶óÀÌ¾ğÆ®°¡ ¿äÃ»ÇÑ ÆÄ¶ó¸ŞÅÍ °ªÀÇ ÀÎÄÚµùÀ» ¼³Á¤ÇØÁÖ´Â ÄÚµå.
+		//í´ë¼ì´ì–¸íŠ¸ê°€ ìš”ì²­í•œ íŒŒë¼ë©”í„° ê°’ì˜ ì¸ì½”ë”©ì„ ì„¤ì •í•´ì£¼ëŠ” ì½”ë“œ.
 		request.setCharacterEncoding("utf-8");
-		//Å¬¶óÀÌ¾ğÆ®¿¡°Ô¼­ ³Ñ¾î¿À´Â id, pass¸¦ ¹Ş°í ÀÎÄÚµù ¼³Á¤ ÈÄ Ãâ·Â½ºÆ®¸²À» ¾ò°í È­¸é¿¡ »Ñ¸². name ¼Ó¼º
+		//í´ë¼ì´ì–¸íŠ¸ì—ê²Œì„œ ë„˜ì–´ì˜¤ëŠ” id, passë¥¼ ë°›ê³  ì¸ì½”ë”© ì„¤ì • í›„ ì¶œë ¥ìŠ¤íŠ¸ë¦¼ì„ ì–»ê³  í™”ë©´ì— ë¿Œë¦¼. name ì†ì„±
 		String id = request.getParameter("id");
 		String passwd = request.getParameter("passwd");
 		
 		response.setContentType("text/html; charset=utf-8");
 		PrintWriter writer = response.getWriter();
-		writer.println("¾ÆÀÌµğ : " + id + "<br>");
-		writer.println("ºñ¹Ğ¹øÈ£ : " + passwd + "<br>");
+		writer.println("ì•„ì´ë”” : " + id + "<br>");
+		writer.println("ë¹„ë°€ë²ˆí˜¸ : " + passwd + "<br>");
 	}
 
 }
