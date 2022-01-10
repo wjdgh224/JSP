@@ -29,14 +29,14 @@ public class GuguServlet extends HttpServlet {
 		
 		if(number < 2 || number > 9) {
 			writer.print("<html><head></head><body>");
-			writer.print("<h1>±¸±¸´ÜÀº 2~9´Ü »çÀÌÀÔ´Ï´Ù.</h1>");
+			writer.print("<h1>êµ¬êµ¬ë‹¨ì€ 2~9ë‹¨ ì‚¬ì´ì…ë‹ˆë‹¤.</h1>");
 			writer.print("</body></html>");
 			return;
 		}
 		
 		writer.print("<table border=1 width=800 align=center>");
 		writer.print("<tr align=center bgcolor='#FFFF66'>");
-		writer.print("<td colspan=4>" + number + "´Ü Ãâ·Â</td></tr>");
+		writer.print("<td colspan=4>" + number + "ë‹¨ ì¶œë ¥</td></tr>");
 		
 		for(int i=1; i<=9; i++) {
 			if(i%2==0) {
