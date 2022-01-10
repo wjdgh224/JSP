@@ -8,15 +8,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-//javax.servletÆĞÅ°Áö¿¡ ¿¹¿Ü ¹ß»ı½Ã, ÇÁ·ÎÁ§Æ® ¿ìÅ¬¸¯ build path¿¡¼­ libraries -> add external jars
-//->ÅèÄ¹Æú´õ\lib\ -> Ã£±â(jsp_api.jar, servlet_api.jarÃß°¡)
+//javax.servletíŒ¨í‚¤ì§€ì— ì˜ˆì™¸ ë°œìƒì‹œ, í”„ë¡œì íŠ¸ ìš°í´ë¦­ build pathì—ì„œ libraries -> add external jars
+//->í†°ìº£í´ë”\lib\ -> ì°¾ê¸°(jsp_api.jar, servlet_api.jarì¶”ê°€)
 
 /**
  * Servlet implementation class HelloWorld
  */
-//URL¸ÅÇÎÄÚµå°¡ @WebServlet¾î³ëÅ×ÀÌ¼Ç¿¡ ¸í½Ã.
-//@WebServlet¾î³ëÅ×ÀÌ¼Çº¸´Ù web.xml¿¡¼­ ÁöÁ¤ÇÑ ¸ÅÇÎÄÚµå ¿ì¼±¼øÀ§°¡ ³ô´Ù.
-//¼­ºí¸´ ÆÄÀÏÀÌ µÇ¸é HttpServletÅ¬·¡½º¸¦ ÀÚµ¿À¸·Î »ó¼Ó.
+//URLë§¤í•‘ì½”ë“œê°€ @WebServletì–´ë…¸í…Œì´ì…˜ì— ëª…ì‹œ.
+//@WebServletì–´ë…¸í…Œì´ì…˜ë³´ë‹¤ web.xmlì—ì„œ ì§€ì •í•œ ë§¤í•‘ì½”ë“œ ìš°ì„ ìˆœìœ„ê°€ ë†’ë‹¤.
+//ì„œë¸”ë¦¿ íŒŒì¼ì´ ë˜ë©´ HttpServletí´ë˜ìŠ¤ë¥¼ ìë™ìœ¼ë¡œ ìƒì†.
 @WebServlet("/Hworld")
 public class HelloWorld extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -27,9 +27,9 @@ public class HelloWorld extends HttpServlet {
     public HelloWorld() {
     }
 
-    //2°¡Áö ¸Ş¼­µå doGet(), doPost()Àº ¼­ºí¸´ ÆÄÀÏÀÌ Ã³¸®ÇÏ´Â ºÎºĞ.
-    //ÀÌ ¼­ºí¸´À» È£ÃâÇÒ ¶§ Å¬¶óÀÌ¾ğÆ®¿¡¼­ ¿äÃ»ÀÌ µé¾î¿Ã ¶§, getÀÌ³Ä post³Ä¿¡ µû¶ó È£ÃâÀÌ ´Ş¶óÁü.
-    //doGet()¸Ş¼­µå´Â ÆûÀ» ±×³É Ãâ·ÂÇÏ´Â ÇüÅÂ, doPost()´Â µ¥ÀÌÅÍ¸¦ °¡°øÀÌ³ª Ã³¸®ÄÚµå¸¦ ½ÇÇàÇÒ ¶§.
+    //2ê°€ì§€ ë©”ì„œë“œ doGet(), doPost()ì€ ì„œë¸”ë¦¿ íŒŒì¼ì´ ì²˜ë¦¬í•˜ëŠ” ë¶€ë¶„.
+    //ì´ ì„œë¸”ë¦¿ì„ í˜¸ì¶œí•  ë•Œ í´ë¼ì´ì–¸íŠ¸ì—ì„œ ìš”ì²­ì´ ë“¤ì–´ì˜¬ ë•Œ, getì´ëƒ postëƒì— ë”°ë¼ í˜¸ì¶œì´ ë‹¬ë¼ì§.
+    //doGet()ë©”ì„œë“œëŠ” í¼ì„ ê·¸ëƒ¥ ì¶œë ¥í•˜ëŠ” í˜•íƒœ, doPost()ëŠ” ë°ì´í„°ë¥¼ ê°€ê³µì´ë‚˜ ì²˜ë¦¬ì½”ë“œë¥¼ ì‹¤í–‰í•  ë•Œ.
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("Hellow World");
 		System.out.println("doGet()");
@@ -40,7 +40,7 @@ public class HelloWorld extends HttpServlet {
 		System.out.println("Hellow World");
 		System.out.println("doPost()");
 	}
-	//°á·Ğ
-	//1.jspÆÄÀÏ : HTMLÆÄÀÏ³» jspÄÚµå¸¦ ³Ö´Â °Í.
-	//2.servletÆÄÀÏ : ÀÚ¹ÙÆÄÀÏÀÌ°í, ¾Æ¿ï·¯ ¹İµå½Ã ¸ÅÇÎÀ» ÇØ¼­ »ç¿ë.
+	//ê²°ë¡ 
+	//1.jspíŒŒì¼ : HTMLíŒŒì¼ë‚´ jspì½”ë“œë¥¼ ë„£ëŠ” ê²ƒ.
+	//2.servletíŒŒì¼ : ìë°”íŒŒì¼ì´ê³ , ì•„ìš¸ëŸ¬ ë°˜ë“œì‹œ ë§¤í•‘ì„ í•´ì„œ ì‚¬ìš©.
 }
